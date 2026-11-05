@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SmartRuTube — клиент RuTube для Android TV</title>
+<meta name="description" content="SmartRuTube — неофициальный клиент RuTube для Android TV и ТВ-приставок. Без рекламы, без трекинга, без Google Services.">
+<style>
+  :root{
+    --bg:#0f1115; --card:#171a21; --line:#262b36;
+    --text:#e8ecf3; --muted:#9aa4b2; --accent:#118484; --accent2:#15a3a3;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--text);
+    font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  a{color:var(--accent2); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1000px; margin:0 auto; padding:0 20px}
+  header{padding:56px 0 32px; border-bottom:1px solid var(--line)}
+  .brand{display:flex; align-items:center; gap:16px; flex-wrap:wrap}
+  h1{font-size:40px; line-height:1.15; margin:0; letter-spacing:-.5px}
+  .tag{color:var(--muted); font-size:18px; margin:16px 0 0; max-width:640px}
+  .btn{
+    display:inline-block; margin-top:24px; padding:14px 26px; border-radius:10px;
+    background:linear-gradient(180deg,var(--accent2),var(--accent)); color:#fff;
+    font-weight:600; font-size:17px;
+  }
+  .btn:hover{text-decoration:none; filter:brightness(1.08)}
+  .meta{color:var(--muted); font-size:14px; margin-top:12px}
+  section{padding:40px 0; border-bottom:1px solid var(--line)}
+  h2{font-size:24px; margin:0 0 18px}
+  ul.features{list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:8px 28px}
+  ul.features li{padding-left:22px; position:relative; color:var(--text)}
+  ul.features li:before{content:"•"; position:absolute; left:6px; color:var(--accent2)}
+  .shots{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px}
+  .shots img{width:100%; height:auto; border-radius:10px; border:1px solid var(--line); display:block}
+  .card{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px 22px}
+  .note{color:var(--muted); font-size:14px}
+  footer{padding:28px 0 48px; color:var(--muted); font-size:14px}
+  code{background:#11141a; border:1px solid var(--line); border-radius:6px; padding:2px 6px; font-size:14px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand"><h1>SmartRuTube</h1></div>
+    <p class="tag">Неофициальный клиент <strong>RuTube</strong> для Android TV и ТВ-приставок.
+    Без рекламы, без трекинга, без Google Services. Управление — только пультом.</p>
+    <a class="btn" href="https://github.com/dimzon/smartrutube-site/releases/latest">Скачать APK</a>
+    <p class="meta">Версия 1.0.435 · Android TV 4.2+ · APK без native-библиотек, архитектура не важна</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Что это</h2>
+    <p>SmartRuTube — форк <a href="https://github.com/yuliskov/SmartTube">SmartTube</a>: проверенный
+    TV-интерфейс (leanback, фокус-навигация, карточки, плеер) подключён к API RuTube вместо YouTube.
+    Поддержка YouTube из приложения полностью удалена — ни YouTube-кода, ни YouTube-сервисов.</p>
+    <p class="note">Проект в активной разработке. Публичный контент RuTube работает без входа в аккаунт.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Возможности</h2>
+    <ul class="features">
+      <li>Видео и прямые эфиры телеканалов</li>
+      <li>Качество до 4K (2160p), перемотка, скорость, повтор</li>
+      <li>Субтитры SRT/VTT с выбором языка</li>
+      <li>Вертикальные видео #SHORTS</li>
+      <li>Поиск по RuTube: видео и каналы</li>
+      <li>Главная, Фильмы и сериалы, Телешоу</li>
+      <li>«В эфире» и «ТВ» с сеткой телепрограмм</li>
+      <li>Спорт, Игры, Музыка, Юмор, Детям, Еда, Наука</li>
+      <li>Страницы каналов и комментарии</li>
+      <li>Смотреть позже, локальные плейлисты</li>
+      <li>История просмотров с позициями</li>
+      <li>Блокировка нежелательных каналов</li>
+      <li>Вход в аккаунт RuTube по QR-коду</li>
+      <li>Подписки, лайки и дизлайки</li>
+      <li>Синхронизация истории с аккаунтом</li>
+      <li>Тёмная и светлая темы, 10+ цветов</li>
+      <li>Шаринг по QR: ролик, канал, плейлист</li>
+      <li>Резервное копирование настроек</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Скриншоты</h2>
+    <div class="shots">
+      <img src="shots/section-home.jpg" alt="Главная">
+      <img src="shots/section-tv.jpg" alt="ТВ с сеткой телепрограмм">
+      <img src="shots/section-live.jpg" alt="В эфире">
+      <img src="shots/section-shorts.jpg" alt="Shorts">
+      <img src="shots/section-movies.jpg" alt="Кино и сериалы">
+      <img src="shots/controls.png" alt="Плеер">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Установка</h2>
+    <div class="card">
+      <p>1. Скачайте APK на приставку или телефон-флешку.</p>
+      <p>2. Установите файловым менеджером либо командой:</p>
+      <p><code>adb install SmartRuTube_beta_1.0.435_universal.apk</code></p>
+      <p class="note">Рекомендуется Android 9 и новее. Автор тестировал приложение только на Android 9 —
+      на других версиях работа не проверялась. Приложение не конфликтует с SmartTube: другой пакет и свои каталоги данных.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Ограничения</h2>
+    <ul class="features">
+      <li>Только Android TV и ТВ-приставки</li>
+      <li>RuTube отдаёт контент через HLS; DASH/MP4 не используются</li>
+      <li>Платный контент PREMIER не воспроизводится</li>
+      <li>Часть телеканалов доступна только через внешний iframe-плеер</li>
+      <li>Голосовой поиск зависит от устройства</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Обсуждение и поддержка</h2>
+    <p>Тема на 4PDA: <a href="https://4pda.to/forum/index.php?showtopic=1129095">SmartRuTube</a></p>
+    <p class="note">SmartRuTube — неофициальный клиент. Не связан с ООО «Рутьюб» и правообладателями.
+    База кода — SmartTube (MIT).</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">SmartRuTube · Android TV</div>
+</footer>
+
+</body>
+</html>
